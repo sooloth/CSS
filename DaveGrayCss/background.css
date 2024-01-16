@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;800&family=Poppins:wght@100;200;300;400;500;600&family=Quintessential&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{display: block;}
+body{
+    font-family:"Roboto", sans-serif;
+    min-height: 100vh;
+}
+.profile-pic-figure{
+    width: 50%;
+    height: 50%;
+}
+.profile-pic-figure img{
+    width: 100%;
+    height: auto;
+    min-width: 100px;
+    border: 5px double gray;
+    border-radius: 50%;
+}
+
+.example{
+    margin-top: 1rem;
+    padding-left: 20px;
+    border: 1px solid red;
+}
+.example img{
+    width: 25%;
+    height: auto;
+}

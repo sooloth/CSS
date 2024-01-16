@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            font-size: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        p {
+            margin: 4rem auto;
+        }
+    </style>
+    <style id="one">
+        .one::after,
+        .one::before {
+            animation-duration: 0.9s;
+            animation-timing-function:ease-in-out;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-name: load1;
+            animation-direction: alternate;
+            animation-play-state: running;
+            background-color: #da1a1a;
+            border-radius: 50%;
+            position: absolute;
+            content: "";
+            background-color: cornflowerblue;
+            top: 0;
+            width: 20px;
+            height: 20px;
+        }
+        .one{
+            background-color: #444;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            position: relative;
+        }
+        .one::before {
+            left: -30px;
+            transform-origin: 20px center;
+        }
+        .one::after {
+            left: 30px;
+            transform-origin: -10px center;
+        }
+
+        @keyframes load1 {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(210deg);
+            }
+        }
+    </style>
+    <style id="two">
+        .two {
+            background-color: #444;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: relative;
+            animation: 0.4s linear 0.3s infinite alternate both running jump1;
+        }
+        .two::before,
+        .two::after {
+            position: absolute;
+            content: "";
+            background-color: cornflowerblue;
+            width: 20px;
+            height: 20px;
+            top: 0;
+            border-radius: 50%;
+        }
+        .two::before {
+            right: 20px;
+            animation: .4s linear 0s infinite alternate both running jump1;
+        }
+        .two::after {
+            left: 20px;
+            animation: 0.4s linear 0.6s infinite alternate both running jump1;
+        }
+
+        @keyframes jump1 {
+            0% {
+                transform: translateY(-10px);
+            }
+            50% {
+                transform: translateY(0px);
+            }
+            100% {
+                transform: translateY(10px);
+            }
+        }
+    </style>
+     <style id="three">
+        .three {
+          background-color: #444;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          position: relative;
+          animation: 1s linear 0.5s infinite alternate both running swell;
+        }
+        .three::before,
+        .three::after {
+          position: absolute;
+          content: " ";
+          background-color: cornflowerblue;
+          width: 20px;
+          height: 20px;
+          top: 0;
+          right: 20px;
+          border-radius: 50%;
+        }
+        .three::before {
+          right: 20px;
+          animation: 1s linear 0s infinite alternate both running swell;
+        }
+        .three::after {
+          left: 20px;
+          animation: 1s linear 1s infinite alternate both running swell;
+        }
+        @keyframes swell {
+          0% {
+            transform: scale(0.75);
+          }
+          50% {
+            transform: scale(1);
+          }
+          100% {
+            transform: scale(2);
+          }
+        }
+      </style>
+      <style id="four">
+        .four {
+          background-color: #111;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          position: relative;
+          animation: 3s linear 1s infinite normal both running colour;
+        }
+        .four::before,
+        .four::after {
+          position: absolute;
+          content: " ";
+          background-color: #111;
+          width: 20px;
+          height: 20px;
+          top: 0;
+          border-radius: 50%;
+        }
+        .four::before {
+          right: 30px;
+          animation: 3s linear 0s infinite normal both running colour;
+        }
+        .four::after {
+          left: 30px;
+          animation: 3s linear 2s infinite normal both running colour;
+        }
+        @keyframes colour {
+          0% {
+            background-color: #8c2121;
+          }
+          33.3% {
+            background-color: #ddd;
+          }
+          66% {
+            background-color: #3012f8;
+          }
+          100% {
+            background-color: #de0fc9;
+          }
+        }
+      </style>
+</head>
+<body>
+    <header>
+        <h1>Create Your Own</h1>
+        <h2>CSS Spinners &amp; Loaders</h2>
+    </header>
+    <p class="one"></p>
+    <p class="two"></p>
+    <p class="three"></p>
+    <p class="four"></p>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+               /*********************************************
+        border-image-source: url(), linear-gradient, repeating-linear-gradient
+        border-image-slice: 1 - 4 numeric values [fill] /
+        border-image-width: 1 - 4 numeric values   /
+        border-image-outset: 1 - 4 numeric values
+        border-image-repeat: stretch, repeat, round, space
+        
+        border-style: solid  - required by the spec.
+        border-width: amount of space created to display the image
+        
+        border-diamonds image gratuitously borrowed from the MDN sample:
+        https://interactive-examples.mdn.mozilla.net/media/examples/border-diamonds.png
+        *********************************************/
+        p{
+            padding: 30px;
+            margin: 30px;
+            font-size: 20px;
+            line-height: 1.7;
+            font-family: sans-serif;
+        }
+        p:nth-child(2){
+            border-width: 30px;
+            border-style: solid;
+            border-image-source: url(./border-diamonds.png);
+            border-image-slice: 30 fill;
+            border-image-width: 60px;
+            border-image-repeat: space;
+            border-image-outset: 0px;
+        }
+        p:nth-child(3){
+            border-width: 30px; /* space provided for the border */
+            border-style: solid;
+            border-image: url(./border-diamonds.png) 30 fill / 30px / 15px round;
+        }
+        p:nth-child(4){
+            border-width: 30px;
+            border-style: solid;
+            border-image-source: url(./border-diamonds.png);
+            border-image-slice: 30;
+            border-image-repeat: repeat;
+        }
+        p:nth-child(5){
+            border-width: 30px;
+            border-style: solid;
+            border-image-source: url(./border-diamonds.png);
+            border-image-slice: 30 10 20 10; /* T R B L */
+            border-image-repeat:stretch;
+        }
+        p:nth-child(6){
+            border-width: 10px;
+            border-style: solid;
+            border-image-source: url(./border-diamonds.png);
+            border-image-slice: 30;
+            border-image-width: 60px;
+            border-image-repeat: space;
+        }
+        p:nth-child(7){
+            border-width: 10px;
+            border-style: solid;
+            border-image-source: repeating-linear-gradient(45deg, gold, black 10px, gold 60px);
+/*            border-image-source: linear-gradient(gold, black);*/
+            border-image-repeat: stretch;
+            border-image-slice: 30;
+        }
+    </style>
+</head>
+<body>
+    <p><img src="border-diamonds.png" alt="border image diamond"> Image is 90px by 90px. Each diamond is 30px tall and wide.</p>
+    <p class="b">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde eaque eum id rem debitis alias maxime, exercitationem officiis perferendis a nemo veritatis! Quos, iure quas et similique placeat corporis ab?</p>
+    <p class="b">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium voluptatum rerum doloremque quasi vero eligendi sapiente? Facere accusamus sapiente ipsam ex ducimus excepturi, maiores ullam nesciunt, doloribus esse in est?</p>
+    <p class="b">Ipsum maxime aut modi rerum sapiente ducimus a aperiam sunt ipsa amet nobis ullam reiciendis, repellat cumque accusamus. Libero amet, qui sequi explicabo, at adipisci perspiciatis est a. Sint, nihil.</p>
+    <p class="b">Obcaecati odio dicta nesciunt, maxime unde eligendi, atque optio fugiat. Possimus, saepe eligendi unde fugiat porro, architecto accusamus, maxime veniam quaerat temporibus nesciunt natus non totam. Cum ad, alias sed.</p>
+    <p class="b">Voluptatem animi ipsum culpa, sapiente rem, tempora voluptates sunt amet? Ab odio at pariatur maxime earum magni culpa, maiores provident nulla facilis aut aliquid corporis, numquam molestias distinctio eum nihil.</p>
+    <p class="b">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae quod, doloribus. Dicta inventore totam maiores illo architecto eaque ut expedita debitis necessitatibus? Deserunt animi quaerat, rem quam fuga iusto quod.</p>
+</body>
+</html>

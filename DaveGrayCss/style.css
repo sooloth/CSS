@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;800&family=Poppins:wght@100;200;300;400;500;600&family=Quintessential&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+nav{
+    border: 2px solid #333;
+    border-radius: 2rem;
+    margin: 0 auto 1rem;
+    max-width: 600px;
+    font-size: 3rem;
+    line-height: 7rem;
+}
+/* h2{
+    padding: 1rem;
+    background: gold;
+    border-radius: 2rem 2rem 0 0;
+} */
+ul{
+    list-style-type: none;
+}
+li{
+    border-top: 1px solid black;
+}
+li a {
+    display: block;
+}
+
+li a,li a:visited{
+    text-decoration: none;
+    color: #333;
+}
+li a:hover,li a:focus{
+    background: #333;
+    color: whitesmoke;
+    cursor:pointer;
+}
+li:last-child a{
+    border-radius: 0 0 2rem 2rem;
+}
+
+.columns{
+    /* column-count: 4;
+    column-width: 250px; */
+    columns: 4 250px;
+    column-rule: solid 3px #333;
+    column-gap: 3rem;
+}
+.columns p{
+    margin-top: 0;
+}
+.columns h2{
+    padding-top: 0;
+    color: white;
+    background: #333;
+    padding: 1rem;
+    break-inside: avoid;
+    /* break-before: column; */
+}
+.columns .quote{
+    margin: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    color: #333;
+    column-span: all;
+}
+.nowrap{
+    white-space: nowrap;
+}
+hr{
+    border-color: yellow;
+    margin-top: 30px;
+    border-width: .5rem;
+}

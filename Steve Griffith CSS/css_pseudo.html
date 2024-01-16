@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            color: cornflowerblue;
+        }
+        p:hover{
+            color: rebeccapurple;
+            font-weight: 700;
+        }
+        input:required{
+            border: 2px solid #333;
+        }
+        input:optional{
+            font-size: 3rem;
+            margin: 2rem;
+        }
+        input:checked{
+            margin: 4rem;
+        }
+        p:last-of-type{
+            font-size: 2rem;
+        }
+        br:empty{
+            line-height: 4rem;
+        }
+        P::selection{
+            background-color: gold;
+            color: red;
+        }
+        p::first-letter{
+            font-size: 3rem;
+        }
+        p::first-line{
+            color: black;
+        }
+        p::after{
+            content:"ok";
+            padding-left: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS pseudo-class vs pseudo-elements</h1>
+    </header>
+    <main>
+        <h2>sub Heading</h2>
+        <p>
+            <input type="text" required/>&#128577;<br/>
+            <input type="checkbox" checked />
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure minus, voluptatum esse blanditiis quam adipisci laudantium natus iusto. Autem expedita libero quas iste commodi consequuntur nihil fugiat perferendis illo eligendi?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure alias, nam laudantium fuga voluptates voluptatem sunt, delectus cupiditate soluta asperiores, nulla debitis tempore. Voluptatum ratione facere expedita, qui optio culpa?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nisi repellendus. Labore ipsa assumenda fugit dolorem repellat fugiat, alias accusamus sint ratione sequi in adipisci cumque laudantium, eaque vero dicta.</p>
+    </main>
+</body>
+</html>

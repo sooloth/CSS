@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 5rem 7rem 5rem;
+            grid-template-areas: 
+                "a b c d"
+                "e f g h"
+                "i j k l";
+        }
+        .box{
+            text-align: center;
+            font-size: 2rem;
+            line-height: 2rem;
+            padding: 0.5rem 2rem;
+        }
+        .a{
+            background-color: hsl(0, 30%, 70%);
+            grid-area: a;
+        }
+        .b{
+            background-color: hsl(30, 30%, 70%);
+            grid-area: b;
+        }
+        .c{
+            background-color: hsl(60, 30%, 70%);
+            grid-area: c;
+        }
+        .d{
+            background-color: hsl(90, 30%, 70%);
+            grid-area: d;
+        }
+        .e{
+            background-color: hsl(120, 30%, 70%);
+            grid-area: e;
+        }
+        .f{
+            background-color: hsl(150, 30%, 70%);
+            grid-area: f;
+        }
+        .g{
+            background-color: hsl(180, 30%, 70%);
+            grid-area: g;
+        }
+        .h{
+            background-color: hsl(210, 30%, 70%);
+            grid-area: h;
+        }
+        .i{
+            background-color: hsl(240, 30%, 70%);
+            grid-area: i;
+        }
+        .j{
+            background-color: hsl(270, 30%, 70%);
+            grid-area: j;
+        }
+        .k{
+            background-color: hsl(300, 30%, 70%);
+            grid-area: k;
+        }
+        .l{
+            background-color: hsl(330, 30%, 70%);
+            grid-area: l;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="box a">box 1</div>
+        <div class="box b">box 2</div>
+        <div class="box c">box 3</div>
+        <div class="box d">box 4</div>
+        <div class="box e">box 5</div>
+        <div class="box f">box 6</div>
+        <div class="box g">box 7</div>
+        <div class="box h">box 8</div>
+        <div class="box i">box 9</div>
+        <div class="box j">box 10</div>
+        <div class="box k">box 11</div>
+        <div class="box l">box 12</div>
+    </main>
+</body>
+</html>

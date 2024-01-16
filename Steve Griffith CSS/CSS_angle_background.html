@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --hue: 74deg;
+            --mastC: hsl(74deg, 84%, 89%);
+            --firstC: hsl(74deg, 34%, 59%);
+            --secondC: hsl(74deg, 64%, 29%);
+            --thirdC: hsl(74deg, 34%, 29%);
+            --darkTxt: hsl(74deg, 80%, 20%);
+            --lightTxt: hsl(74deg, 80%, 80%);
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        *::before,
+        *::after{
+            box-sizing: inherit;
+        }
+        html{
+            font-size: 20px;
+            line-height: 1.5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-weight: 100;
+        }
+        html,body{
+            background-color: hsl(var(--hue), 64%, 59%);
+        }
+        .wrapper{
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h1{
+            font-size: 5.063rem;
+        }
+        h2{
+            font-size: 3.375rem;
+        }
+        p{
+            font-size: 1.5rem;
+        }
+        section h2{
+            padding: 1rem 0;
+        }
+        section p{
+            text-align: justify;
+            padding-bottom: 1rem
+        }
+        .mast h1,
+        .mast h2{
+            color: var(--darkTxt);
+        }
+        .first h2{
+            color: var(--darkTxt);
+        }
+        .second h2{
+            text-align: right;
+            color: var(--lightTxt);
+        }
+        .second p{
+            color: var(--lightTxt);
+        }
+        .third h2,
+        .third p{
+            color: var(--lightTxt);
+        }
+        section{
+            margin-top: 2rem;
+        }
+        .mast,
+        .first,
+        .second,
+        .third{
+            /* transform: rotate(3deg); */
+            padding: 3rem 4rem 5rem;
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+        }
+        .mast::before,
+        .first::before,
+        .second::before,
+        .third::before{
+            position: absolute;
+            content: "";
+            display: block;
+            z-index: -1;
+            top: 2rem;
+            left: -2rem;
+            bottom: 2rem;
+            right: 2rem;
+           
+        }
+        .mast::before{
+            border-top: 2rem solid var(--thirdC);
+            background-color: var(--mastC);
+            transform: rotate(-4deg);
+        }
+        .first::before{
+            background-color: var(--firstC);
+            transform: rotate(3deg);
+            border-bottom: 2rem solid var(--mastC);
+        }
+        .second::before{
+            background-color: var(--secondC);
+            transform: rotate(-3deg);
+            border-top: 2rem solid var(--firstC);
+            
+        }
+        .third::before{
+            background-color: var(--thirdC);
+            transform: rotate(4deg);
+        }
+        .mast{
+            padding-top: 5rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="mast">
+            <h1>Site Heading</h1>
+            <h2>Sub Heading</h2>
+        </header>
+        <section class="first">
+            <h2>Other heading</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia nobis voluptatibus illum, quo dicta esse voluptas omnis deleniti mollitia unde aliquid amet corporis ipsa adipisci distinctio eveniet vitae quidem quibusdam!
+            Incidunt, aliquid maiores. Totam inventore quas maxime magni nihil iste quam obcaecati fugit reprehenderit facere dolorem, ullam quo soluta quod amet in nobis magnam? Deserunt laudantium odit eius delectus eligendi.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis consequatur consequuntur, laudantium ex totam, beatae, corrupti quos eos at quidem consectetur. Atque quod similique delectus doloremque quam quas expedita ad.</p>
+        </section>
+        <section class="second">
+            <h2>Cool Heading</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, laborum fugiat quo vitae rem architecto non sapiente impedit libero ipsa quaerat, maiores repellendus. Possimus recusandae inventore deserunt nobis nisi culpa ad voluptates a maiores iure accusantium architecto praesentium deleniti, debitis quaerat ipsum cumque impedit ullam saepe vero obcaecati modi quidem quos. Repellendus eos fuga et similique. Aliquid adipisci aperiam accusamus, soluta numquam magnam ipsam vitae exercitationem recusandae in? Tempore neque dignissimos atque odio cumque totam non corrupti quos debitis quam. Provident fugit officiis commodi incidunt aspernatur aliquam esse magni, in, earum nobis eum quam vero tenetur illum eius dignissimos ullam!</p>
+            <p>Sapiente rerum eveniet ipsa! Ratione eum libero tenetur pariatur ea quos tempore, ab a nemo incidunt fuga nobis? Sapiente necessitatibus voluptate odit sit illum facilis similique et nulla quis quisquam vero, itaque perferendis aliquam pariatur error voluptates ipsa? Molestias reprehenderit maxime provident aspernatur quas repellat magnam nostrum necessitatibus ab quisquam aliquam animi quaerat iure nulla, neque est voluptas aut optio explicabo voluptatibus dolores! Et odio soluta accusamus commodi quibusdam tempora quas maxime, laudantium voluptates vitae dignissimos quasi quos voluptatum quae dolor! Incidunt quasi asperiores cumque eius maxime, non illo aliquid ipsam sapiente, veritatis assumenda nulla velit neque, dolore ab. Voluptatum!</p>
+            <p>Dolorem harum veniam ipsum provident quam quisquam repellat dolor temporibus, quibusdam fugit autem, quia, molestiae quo. Laboriosam, minus! Omnis voluptas vel eveniet ex fuga, cupiditate praesentium quam veniam nisi, voluptatem obcaecati, quae iste necessitatibus at quas sequi autem ipsam? Reiciendis voluptatibus recusandae, modi consectetur aliquid quam totam distinctio eligendi quas quasi unde libero ea voluptatum sequi enim id error quibusdam, laborum quo? Nisi provident atque commodi exercitationem nesciunt, qui incidunt iusto delectus sunt inventore culpa, officiis, quo neque. Modi dolores est cupiditate minus pariatur recusandae voluptatum dignissimos commodi incidunt, ipsum soluta hic voluptas sunt rerum dolorum sed autem enim omnis?</p>
+        </section>
+        <section class="third">
+            <h2>Minor Heading</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem inventore doloremque veritatis exercitationem sit tenetur iste, perspiciatis nemo at labore aliquid itaque sed, nisi laboriosam voluptatem consequatur id. Asperiores cumque rerum deleniti error animi neque. Magni in est consequatur eligendi, nostrum quis? Recusandae alias autem non facere doloremque mollitia quidem illum enim neque dolores, soluta necessitatibus quod dolorum nostrum eum amet reprehenderit? Accusamus ut modi, consequuntur nam dolor sequi eius eaque incidunt, asperiores officia praesentium amet alias exercitationem est quae tenetur dicta veritatis eos blanditiis nesciunt distinctio ducimus? Necessitatibus nostrum esse quasi deserunt consequuntur voluptatem eum sapiente voluptas porro, facere unde harum ab sint delectus, earum cupiditate corporis fuga voluptates. Error voluptate iure qui voluptates corrupti saepe voluptatem eius, quo dolore tempora porro laudantium ullam enim nulla officiis quidem eaque, nemo, aliquam laborum ratione. Consectetur maiores tempore voluptatibus blanditiis eaque dolorem ipsum sit, ipsa natus, delectus, hic quod. Saepe maxime quas deserunt dolorem voluptatem libero ipsam. Non libero in voluptas aspernatur provident nisi aperiam nobis hic esse eum assumenda saepe ad tempore nostrum perferendis sapiente quae odio, voluptatum ipsum autem sunt! Molestias odio non cupiditate eveniet quos, corporis maiores quod doloremque, similique veritatis ipsam exercitationem labore suscipit ea quisquam! Perferendis!</p>
+        </section>
+    </div>
+</body>
+</html>

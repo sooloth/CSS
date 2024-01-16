@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        p{
+            padding: 1rem;
+            background-color: hsl(298, 30%, 90%);
+        }
+        .one{
+            border: 1px solid  #999;
+            width: 80%;
+            margin: 1rem auto;
+        }
+        .one p:first-of-type{
+            margin: 0 auto;
+        }
+        .one p:last-of-type{
+            margin: 0 auto;
+            text-align: center;
+            
+        }
+        .one span{
+            background-color: hsl(290, 30%, 90%);
+            margin: 0 auto;
+            text-align: center;
+        }
+        .one span:first-of-type{
+            display: inline;
+            
+        }
+        .one span:last-of-type{
+            display: inline-block;
+        }
+        .two{
+            border: 1px solid #999;
+            width: 80%;
+            margin: 1rem auto;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .two p{
+            flex-basis: 40%;
+            text-align: center;
+        }
+        .two p:nth-child(1){}
+        .two p:nth-child(2){}
+        .two p:nth-child(3){}
+        .two p:nth-child(4){}
+
+        .three {
+            border: 1px solid #999;
+            width: 80%;
+            margin: 1rem auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: flex-start;
+            align-items: stretch;
+        }
+        .three p{
+            text-align: center;
+        }
+        .three p:nth-child(1){}
+        .three p:nth-child(2){}
+        .three p:nth-child(3){}
+        .three p:nth-child(4){}
+    </style>
+</head>
+<body>
+    <section class="one">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit nam ratione nisi quasi, optio veniam qui ex corporis. Assumenda, quas. Error quos nulla, facilis nobis officiis, perspiciatis aliquam eaque laboriosam quam eveniet incidunt delectus itaque. Consectetur saepe, omnis atque ea vel consequuntur, esse possimus rem libero ad corrupti tenetur natus velit reiciendis? Perspiciatis reprehenderit temporibus quaerat voluptates tenetur ex ducimus ullam officia distinctio modi laborum harum mollitia asperiores rem eligendi, dicta recusandae voluptas facere corrupti eos iste non commodi iure? Quo, accusantium harum, repudiandae exercitationem nihil saepe suscipit magni fugiat deleniti consequuntur soluta, architecto est veritatis sed ea quas tempore!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptates distinctio nam, architecto sapiente maiores odit blanditiis asperiores accusantium, veniam totam, eum ut quod quidem! Asperiores, natus consectetur quidem, ut quaerat illo mollitia commodi iure ipsa provident fugiat odio. Asperiores eos, quia, cumque necessitatibus laudantium vero nulla maiores ad voluptates earum eligendi. Nostrum iste, excepturi voluptates autem veniam, velit necessitatibus quae earum atque facilis minus sint veritatis expedita minima, quos quisquam eaque! Labore officiis velit eius exercitationem vitae tempore, pariatur itaque ratione fugit consequuntur cupiditate a. Blanditiis ullam tempore ipsum animi? Sapiente iusto pariatur ipsa repudiandae architecto est asperiores illo.</p>
+        <p>Small amount of text</p>
+        <span>INLINE</span>
+        <br/>
+        <span>INLINE-BLOCK</span>
+    </section>
+    <section class="two">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, sequi tenetur atque ipsam error voluptatibus nesciunt. Sint, nesciunt eum. Iste ipsa ipsum culpa. Vel porro aut deleniti ad ab ipsum odit, maxime quod excepturi qui obcaecati ut nemo eius ullam fugit earum a rerum officiis! Provident rerum eveniet amet, voluptates nobis aperiam ad libero cupiditate! Possimus, sit? Id dolor eos quos quibusdam suscipit perferendis aliquid at incidunt optio amet magnam iusto illum cupiditate, deleniti, error ducimus tenetur architecto. Atque commodi, cupiditate veritatis quaerat nihil quasi beatae provident. Dolorum itaque ad ipsa inventore? Voluptatem, voluptatibus. Velit expedita animi tempora perferendis minima?</p>
+        <p>Flex</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ea magni maxime expedita, maiores quae accusamus exercitationem, tempore recusandae enim optio corrupti adipisci non at quis reprehenderit sunt atque. Maiores consequuntur ad atque repudiandae, expedita enim temporibus corporis aliquam ipsa veritatis non cupiditate molestiae sequi delectus quo dolor numquam? Perspiciatis repudiandae itaque sapiente nihil quas et nobis nesciunt non, magnam eos velit dolor totam blanditiis omnis reiciendis exercitationem fugit voluptatum dicta, dolores incidunt voluptates ipsum. Reiciendis, unde. Officia illum laboriosam, debitis est aspernatur neque adipisci quae doloribus sapiente in iure cupiditate eius porro quisquam, rerum, commodi ex dolores corrupti molestiae?</p>
+        <p>Flex</p>
+    </section>
+    <section class="three">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis voluptatum modi recusandae exercitationem ab deserunt sapiente incidunt suscipit nam impedit, aperiam corporis ullam cum, dolor, totam omnis sunt sit vel aliquid dignissimos. Maiores, aliquam rem voluptas hic consequuntur alias vero saepe dolore voluptatibus fugiat non est cum ullam laborum adipisci mollitia similique? Magnam, quod. Quos assumenda reprehenderit ad voluptatibus blanditiis vel excepturi. Natus soluta possimus officiis repellat quibusdam rem omnis tempore, officia veniam dolorem itaque qui magnam sunt perferendis, adipisci temporibus et incidunt sint nisi hic porro maiores unde. Sint libero sunt cupiditate ab autem et accusamus obcaecati asperiores blanditiis!</p>
+        <p>Grid</p>
+        <p>Lorem ipsum dolor sit amet  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse dolorem architecto quaerat suscipit ut autem, expedita fugiat reiciendis quisquam delectus numquam porro reprehenderit maiores ea? Delectus ipsa quasi velit et dolore dolorum blanditiis? Et animi voluptatem a voluptas minima, at ratione ipsam recusandae sit quisquam aperiam cumque tempore dignissimos non, ab exercitationem ut facere facilis veritatis repellat! Eveniet obcaecati vero modi, soluta illum eos voluptatibus quidem quasi vel reprehenderit asperiores in eius! Placeat, saepe unde dolorum suscipit sequi quod, possimus ab pariatur mollitia modi fuga! Amet dolor maiores asperiores temporibus iure accusamus possimus saepe nemo enim? Voluptas praesentium numquam distinctio. consectetur adipisicing elit. Minus est, libero nulla sequi tempora necessitatibus at consequuntur quae incidunt doloribus vitae saepe quaerat beatae? Totam quis hic iure velit cum.</p>
+        <p>Grid</p>
+    </section>
+</body>
+</html>

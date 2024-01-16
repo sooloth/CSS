@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* VERSION 1 */
+        .content{
+            display: grid;
+            max-width: 90%;
+            margin: 1rem auto;
+            border: 1px solid red;
+            grid-template-areas: "A A B B C C"
+                                 "D D D E E E";
+            /* grid-column-gap: 2rem; */
+        }
+        .content div{
+            padding: 1rem;
+        }
+        .A{
+            grid-area: A;
+            background-color: hsl(60, 30%, 90%);
+        }
+        .B{
+            grid-area: B;
+            background-color: hsl(120, 30%, 90%);
+        }
+        .C{
+            grid-area: C;
+            background-color: hsl(180, 30%, 90%);
+        }
+        .D{
+            grid-area: D;
+            background-color: hsl(240, 30%, 90%);
+        }
+        .E{
+            grid-area: E;
+            background-color: hsl(180, 30%, 90%);
+        }
+        /* ======================================================== */
+        /* VERSION 2 */
+
+        .content{
+            display: grid;
+            max-width: 90%;
+            margin: 1rem auto;
+            border: 1px solid red;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: auto;
+            grid-column-gap: 2rem;
+        }
+        .content div{
+            padding: 1rem;
+        }
+        .A{
+            grid-column: 1 / span 2;
+            grid-row: 1;
+            background-color: hsl(60, 30%, 90%);
+        }
+        .B{
+            grid-column: 3 / span 2;
+            grid-row: 1;
+            background-color: hsl(120, 30%, 90%);
+        }
+        .C{
+            grid-column: 5 / span 2;
+            grid-row: 1;
+            background-color: hsl(180, 30%, 90%);
+        }
+        .D{
+            grid-column: 1 / span 3;
+            grid-row: 2;
+            background-color: hsl(240, 30%, 90%);
+        }
+        .E{
+            grid-column: 4 / span 3;
+            grid-row: 2;
+            background-color: hsl(300, 30%, 90%);
+        }
+    </style>
+</head>
+<body>
+    <header><h1>CSS Grid Uneven Columns</h1></header>
+    <main class="content">
+        <div class="third A">
+            <h2>Ad Placement</h2>
+        </div>
+        <div class="third B">
+            <h2>Ad Placement</h2>
+        </div>
+        <div class="third C">
+            <h2>Ad Placement</h2>
+        </div>
+        <div class="half D">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro vel incidunt, dolorum distinctio debitis, nostrum reprehenderit tenetur natus minus voluptatibus atque. Repudiandae blanditiis tempore odio eveniet vel sequi neque, nam accusamus doloremque, impedit dignissimos aperiam voluptatum minus quos excepturi assumenda. Nihil totam quae quas, animi dolor sit autem sunt cum!</p>
+
+        </div>
+        <div class="half E">
+            <p>facilis Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta deleniti consequuntur maxime, et veniam ipsum qui voluptates! Deserunt vitae optio recusandae quae rem deleniti, nihil, exercitationem, nesciunt vel debitis magnam!</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Pangnuar SCH Inc</p>
+    </footer>
+</body>
+</html>

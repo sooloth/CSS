@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: auto;
+            font-size: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.7;
+            min-height: 100vh;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box {
+            width: 400px;
+            margin: auto;
+            padding: 1rem;
+            color: #fff;
+            background-color: #000;
+            position: relative;
+            border: 5px solid transparent;
+            box-sizing: border-box;
+            background-clip: padding-box;
+            border-radius: 1rem;
+        }
+        .box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            margin: -5px;
+            border-radius: inherit;
+            background: linear-gradient(to right, cornflowerblue, #bada55);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio dicta possimus et vel, velit ullam esse deleniti molestiae inventore. Cupiditate asperiores voluptatum libero ipsam facere, itaque nesciunt nemo veritatis nobis rem accusamus expedita cum suscipit corrupti necessitatibus animi debitis qui excepturi repudiandae ab laudantium doloribus quos. Inventore explicabo iure quae! necessitatibus voluptates aut fuga consequatur, quas at illo.</p>
+    </div>
+</body>
+</html>

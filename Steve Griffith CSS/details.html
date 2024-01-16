@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        summary::webkit-details-marker{
+            color: red;
+        }
+        ::marker{
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <p><code>details &amp; summary elements</code></p>
+        <details>
+            <summary>Heading</summary>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque iure nemo nulla repudiandae provident, ex odio quia itaque similique maxime? Doloribus architecto corporis consequuntur aspernatur in alias rerum maxime dicta, deserunt voluptatibus a laboriosam sapiente nihil, molestiae voluptatum temporibus obcaecati assumenda tenetur libero. Voluptates sapiente quos esse aspernatur dolores perspiciatis, delectus cupiditate magni corporis quibusdam sed impedit quasi eaque quisquam adipisci neque mollitia possimus pariatur quam dolore magnam exercitationem numquam, quaerat laborum. Blanditiis autem voluptatem, eligendi quos facilis obcaecati ipsa doloribus amet vero quo minima dolores laudantium, optio a voluptas odio ratione assumenda quis repellendus. Corrupti eligendi ducimus ea delectus aliquam facilis libero quibusdam iste officiis dolorem perspiciatis laborum, incidunt a odio eius non esse natus eaque odit exercitationem placeat maiores? In earum sequi ratione nemo nisi, amet soluta rem eius alias cum assumenda totam mollitia odio nam. Corrupti architecto consequatur, tenetur doloribus quas illum eveniet eaque ad, saepe temporibus porro quibusdam aperiam natus sed eligendi mollitia debitis. Vitae distinctio neque omnis impedit porro dolores ab consequatur numquam obcaecati, nobis quaerat, aliquam necessitatibus voluptatem fugit quo doloribus labore enim assumenda beatae natus mollitia suscipit iure libero quod? Exercitationem eos dicta sed, laudantium quia maiores magni repellat voluptatibus quidem eum dolore.</p>
+        </details>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          let p = document.querySelector("main>p");
+          p.addEventListener("click", (ev) => {
+            console.log("paragraph clicked");
+            let det = document.querySelector("details");
+            if (det.hasAttribute("open")) {
+              // det.removeAttribute("open");
+              det.open = false;
+            } else {
+              // det.setAttribute("open", "open");
+              det.open = true;
+            }
+          });
+        });
+        
+        //To deal with opening the detail summaries for printing can be done like this
+        window.addEventListener('beforeprint', (ev) => {
+          let det = document.querySelector('details');
+          det.setAttribute('open', 'true');
+        });
+
+        window.addEventListener('afterprint', (ev) => {
+          let det = document.querySelector('details');
+          det.removeAttribute('open');
+        });
+        </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            font-size: 20px;
+            line-height: 1.7;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        body {
+            min-height: 100vh;
+            background-color: #fff;
+            color: #333;
+        }
+        ::selection{
+            background-color: #333;
+            color: #fff;
+            text-shadow: 2px 2px 4px cornflowerblue;
+
+            
+        /**
+        cursor: help;
+        caret-color: gold;
+        outline: 5px solid gold;
+        text-decoration: overline;
+        text-emphasis-color: gold;
+        **/
+        }
+        body.dark{
+            background-color: #333;
+            color: #e4e4e4;
+        }
+        .dark ::selection{
+            background-color: lightsalmon;
+            color: maroon;
+        }
+    </style>
+</head>
+<body class="">
+    <header><h1>::selection pseudo-element</h1></header>
+    <main>
+        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, eveniet sit. Sint asperiores soluta architecto ratione tempora! Exercitationem, quae repellendus sunt optio aliquam natus itaque eveniet cupiditate dolores corporis in repudiandae ut dolor voluptatem excepturi qui minima? Mollitia eius repellat dolores enim dolore sunt numquam nesciunt voluptas, iure dolorum magni.</span>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro esse inventore sequi consequatur laborum incidunt? Similique suscipit nam maiores, aperiam repudiandae minima debitis, consectetur quod hic odio perferendis eum veniam blanditiis quaerat dolorum? Officiis soluta non reiciendis at eum. Quo a adipisci vel earum quisquam explicabo voluptas perspiciatis animi facere?</span></p>
+        <p><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla laudantium atque optio ullam? Quibusdam exercitationem placeat minus quis, illum ut quia iusto molestias beatae reiciendis iste sed inventore tempora earum dolor, eveniet commodi rem, obcaecati repellat magni ullam laudantium! Cumque facere quis explicabo ex deserunt libero quae nesciunt ab atque?</span><span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis rem, excepturi, illum aspernatur quo tenetur fugiat ullam sit velit, vero maxime. Nulla iusto ea eos est repellendus ad eveniet dolores repellat quis vel velit pariatur enim dicta dolore nostrum alias dolor, eum aliquid odit doloremque itaque. Vel ratione sed corporis?</span></p>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", ev =>{
+            document.body.addEventListener("dblclick", ev =>{
+                document.body.classList.toggle("dark");
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Animation</title>
+    <style>
+        p{
+            padding: 0.5rem 0;
+            color: #999;
+        }
+        code{
+            color: #333;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #999;
+            background-color: cornflowerblue;
+            color: white;
+            padding: 1rem;
+            margin: 1rem auto;
+            animation-name: wheeee;
+            animation-duration: 1.5s;
+            animation-timing-function: linear;
+            animation-delay: 1000ms;
+            animation-iteration-count: 4;
+            animation-direction: normal;
+            animation-fill-mode: forwards;
+        }
+        @keyframes wheeee{
+            0%{
+                transform: rotate(0deg) scale(1);
+                background-color: cornflowerblue;
+            }
+            50%{
+                transform: rotate(180deg) scale(2);
+            }
+            100%{
+                transform: rotate(360deg) scale(1);
+                background-color: rgb(133, 25, 75);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header> <h1>CSS Animations</h1></header>
+    <main>
+      <p> Animation require a <code>@keyframe</code> name with the steps of the animation defined </p>
+      <p>Then the element to be animated will reference the <code>@keyframe</code> name</p>
+      <p>The element uses an <code>animation</code> property that can set the values for <code>duration</code>
+        <code>delay</code>,<code>timing-function</code>,<code>iteration-count</code>,<code>direction</code>,<code>fill-mode</code>,<code>play-state</code> and <code>name</code>
+    </p>
+    </main>
+    <section>
+        <div class="box">Animated</div>
+    </section>
+
+</body>
+</html>

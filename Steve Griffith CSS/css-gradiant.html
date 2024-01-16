@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            min-height: 200px;
+            border: 1px solid #333;
+            margin: 1rem;
+        }
+        section:nth-of-type(1) .box{
+            background: hsl(60, 30%, 80%) 
+                        linear-gradient(to bottom right,
+                        yellow, gold 70%, red);
+        }
+        section:nth-of-type(2) .box{
+            background: 
+                        radial-gradient(circle farthest-corner at 20% 50%,
+                        yellow, cornflowerblue, green, pink);
+        }
+        section:nth-of-type(3) .box{
+            background: 
+                        repeating-linear-gradient(45deg, rgba(255,0,0,0.5), rgba(255,0,0,0.5) 10px, transparent 10px, transparent 30px),
+
+                       repeating-linear-gradient(-45deg,rgba(255,0,0,0.5),rgba(255,0,0,0.5) 10px, white 10px, white 30px);
+        }
+        section:nth-of-type(4) .box{
+            background: hsl(240, 30%, 80%) 
+                        repeating-radial-gradient(circle, black, black 20px, transparent 20px, transparent 30px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS Gradients</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Linear Gradient</h2>
+            <div class="box"></div>
+        </section>
+        <section>
+            <h2>Radial Gradient</h2>
+            <div class="box"></div>
+        </section>
+        <section>
+            <h2>Linear Gradient</h2>
+            <div class="box"></div>
+        </section>
+        <section>
+            <h2>Linear Gradient</h2>
+            <div class="box"></div>
+        </section>
+    </main>
+</body>
+</html>

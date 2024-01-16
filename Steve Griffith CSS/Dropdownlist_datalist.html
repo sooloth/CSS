@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            box-sizing: border-box;
+            font-size: 20px;
+            line-height: 1.6;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #878787;
+        }
+        *, *::before,*::after{
+            box-sizing: inherit;
+            padding: 0;
+            margin: 0;
+        }
+        main{
+            margin: 1rem auto;
+            max-width: 1000px;
+        }
+        h2{
+            padding: 1rem;
+        }
+        select, option, datalist, input, label, button{
+            font-size: 1.5rem;
+            color: inherit;
+        }
+        
+        p.form-box{
+            padding: 0.5rem 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .form-box option:default{
+            color: red;
+        }
+        .form-box label{
+            flex-basis: 20%;
+            flex-shrink: 0;
+        }
+        .form-box input{
+            flex-basis: 80%;
+            padding: 0 1rem;
+        }
+        .form-box button{
+            flex-basis: auto;
+            padding: 0 1rem;
+            margin-left: 20%;
+            border-radius: 20px;
+        }
+        datalist{
+            font-size: 2rem;
+        }
+        datalist option{
+            font-size: 2rem;
+        }
+        option{
+            font-size: 2rem;
+        }
+
+        .form-box select{
+            background-color: transparent;
+            border: none;
+            outline: none;
+            line-height: 2.5rem;
+            width: 100%;
+            color: white;
+        }
+        .list{
+            background-color: deepskyblue;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 2.5rem;
+            padding: 0 1rem;
+            flex-basis: 80%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h2>HTML Dropdownlists and Datalists</h2>
+        <form name="my-form" action="#">
+            <p class="form-box">
+                <label for="region" title="State or Territory">Region</label>
+                <span class="list">
+                <select name="region" id="region">
+                    <optgroup label="States">
+                        <option value="new-south-wales">New South Wales</option>
+                        <option value="queensland">Queensland</option>
+                        <option value="south-australia">South Australia</option>
+                        <option selected value="tasmania">Tasmania</option>
+                        <option value="victoria">Victoria</option>
+                        <option value="western-australia">Western Australia</option>
+                    </optgroup>
+                    <optgroup label="territories">
+                        <option value="ashmore-cartier-islands">Ashmore and Cartier-Islands</option>
+                        <option value="australian-capital-territory">Australia Capital Territory</option>
+                        <option value="australian-antarctic-territory">South Australia</option>
+                        <option value="chrismas-island">Chrismas-island</option>
+                        <option value="vientians">vientiane</option>
+                        <option value="luangphrabang">Luangphrabang</option>
+                        <option value="phongsaly">Phongsaly</option>
+                        <option value="luangnamtha">Luangnamtha</option>
+                        <option value="bolikhamxay">Bolikhamxay</option>
+                        <option value="savanhnakhet">Savanhnakhet</option>
+                        <option value="sekong">Sekong</option>
+                        <option value="champasak">Champasak</option>
+                    </optgroup>
+                </select>
+            </span>
+            </p>
+            <p class="form-box">
+                <label for="city">City</label>
+                <input id="city" name="city" list="cities"/>
+            </p>
+            <p class="form-box">
+                <button id="btnSend">Click Me</button>
+            </p>
+        </form>
+        <datalist id="cities">
+            <option value="a"></option>
+            <option value="b"></option>
+            <option value="c"></option>
+            <option value="d"></option>
+            <option value="e"></option>
+            <option value="f"></option>
+            <option value="g"></option>
+            <option value="h"></option>
+        </datalist>
+    </main>
+</body>
+</html>

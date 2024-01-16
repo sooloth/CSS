@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        html {
+            font-size: 24px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 100;
+            line-height: 1.6;
+        }
+        body {
+        padding: 0;
+        margin: 0;
+      }
+      nav,
+      header,
+      main,
+      footer {
+        padding: 1rem 2rem;
+      }
+      nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+      h1 {
+        font-size: 3rem;
+        line-height: 1;
+      }
+      h2 {
+        font-size: 2.4rem;
+      }
+      h3 {
+        font-size: 1.8rem;
+        font-weight: 100;
+      }
+      .subhead {
+        color: #999;
+      }
+      p {
+        font-size: 1rem;
+        margin: 1.5rem 0;
+      }
+      .mainnav a {
+        color: orange;
+      }
+      .container {
+        background-color: rosybrown;
+      }
+      #four .four {
+        font-size: 7rem;
+        color: rebeccapurple;
+        /* page specific variations of styles */
+      }
+      body main.main h2 {
+        /* higher specificity means harder to override */
+      }
+      .main h2 {
+        /* easier too override */
+      }
+    </style>
+</head>
+<body id="three">
+    <div class="container">
+        <nav class="mainnav">
+            <a href="#" class="one">Link 1</a>
+            <a href="#" class="two">Link 2</a>
+            <a href="#" class="three">Link 3</a>
+            <a href="#" class="four">Link 4</a>
+        </nav>
+        <ul class="nav">
+            <li class="navlink"><a href="#">Link 1</a></li>
+            <li class="navlink"><a href="#">Link 2</a></li>
+            <li class="navlink"><a href="#">Link 3</a></li>
+            <li class="navlink"><a href="#">Link 4</a></li>
+            <li class="navlink"><a href="#">Link 5</a></li>
+        </ul>
+        <header role="banner">
+            <h1>website</h1>
+            <h2>sub title</h2>
+        </header>
+        <header>
+            <h1>CSS Classes vs IDs</h1>
+            <h3 class="subhead">Noice</h3>
+        </header>
+        <main class="main">
+            <h2 id="level12">Sub Title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui similique perspiciatis ea fugiat necessitatibus aliquid quisquam at quae saepe, neque, quam odio consequatur temporibus quibusdam. Nobis saepe ipsam earum quo reiciendis necessitatibus, quos maxime adipisci architecto nesciunt illo delectus odit. Soluta beatae fugiat at repudiandae fuga autem voluptatum ipsa sed dolores. Autem illo eaque vitae. Saepe, alias aspernatur sequi id quam, rerum vel, tempore facere mollitia libero ullam est. Iure rem enim vero alias harum autem inventore praesentium quia ab ad exercitationem quae sequi eius nobis veritatis officia placeat aspernatur nam, similique itaque magnam commodi distinctio eum! Quos, ad non.</p>
+            <p>Odio quidem iure a aut nam quos, repellat officiis exercitationem molestias qui vel. Rerum esse velit enim similique quas, hic eligendi veniam? Pariatur quisquam cupiditate, dolores minus sequi eos consectetur ducimus quo perspiciatis cumque officia velit alias ab? Commodi ipsa repellendus quam eius asperiores ipsam facere accusantium corporis totam distinctio, rerum fugit tempora sapiente debitis id architecto deleniti, cupiditate, quasi quos sed! Nemo aut, ut nostrum molestias dolor officiis nobis, quidem labore commodi laboriosam iusto culpa nisi velit suscipit minima ducimus animi, numquam aperiam expedita consectetur. Quis sed quae inventore magnam doloremque molestias optio impedit similique, recusandae, ad iure nisi.</p>
+            <p>Beatae alias enim vitae perferendis, soluta doloribus blanditiis. Qui dolore, voluptate, reiciendis, corporis velit nam illum consequatur repudiandae tempora aperiam ducimus? Sequi ducimus beatae incidunt ea molestiae dolores aut suscipit veniam quod sed fugiat perspiciatis, laudantium illo totam reprehenderit harum iure consectetur sapiente eius corporis odit vero. Animi mollitia modi libero ea velit voluptatum voluptatibus explicabo nesciunt numquam accusamus. Fugiat, ipsum hic! Labore alias, in repellat praesentium quae dolor, error perspiciatis ad quo illo nemo laboriosam accusamus, tempora facilis veniam doloribus? Minus magnam consequatur saepe? Ipsum, quasi saepe. Eaque nemo odio quasi quaerat dolor aliquam amet alias tempora corporis fugit.</p>
+        </main>
+        <footer>
+            <p class="subhead">&copy; 2020 pangnuar Inc.</p>
+        </footer>
+    </div>
+</body>
+</html>

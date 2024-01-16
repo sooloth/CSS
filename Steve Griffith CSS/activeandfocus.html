@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 30px;
+        }
+        section :active{
+            font-weight: 700;
+        }
+        section :focus{
+            columns: red;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>:active</h1>
+        <p>Anchors and buttons are where it is usually used. It applied to things a user can click with a mouse and
+            that will change state. It is a short-lived temporary state while the user is holding down the mouse
+            button.</p>
+        <h1>:focus</h1>
+        <p>Form elements and things that are focusable by keyboard or mouse. Think about what happens when adding a
+            tabindex to an element. It can now be focused. Focus can last for a while. The element will remain focused
+            until the user clicks on or tabs to another element.</p>
+        <section>
+            <button>My Button</button> <a href="#">My Link</a>
+        </section>
+        <pre>
+        section :active {
+            font-weight: 700;
+        }
+
+        section :focus {
+            color: red;
+        }
+        </pre>
+    </main>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            font-size: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+        }
+        .header {
+            background-color: hsl(220, 50%, 40%);
+            color: #fff;
+            position: relative;
+            z-index: 100;
+            box-shadow: 0 2px 4px #333;
+        }
+        .header h1 {
+            font-size: 2rem;
+            line-height: 1;
+            padding: 0.5rem 1rem;
+            margin: 0;
+        }
+        main {
+            padding: 2rem;
+        }
+        main h2 {
+            margin: 0;
+        }
+        p {
+            color: #555;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        /* ==============================
+                NAV MENU
+        ===================================
+        */
+        .main nav {
+            display: none;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            background-color: hsl(30, 30%, 90%);
+        }
+        .expanded .main-nav {
+            display: flex;
+        }
+        .main-nav a {
+            color: #333;
+            flex-basis: 25%;
+            text-align: center;
+            width: 100%;
+            padding: 2rem 0;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+        /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+            THE BURGER
+        
+        $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+        .burger {
+            position: absolute;
+            top: 25px;
+            right: 20px;
+            height: 4px;
+            line-height: 0;
+            width: 44px;
+            background-color: white;
+            border-radius: 1px;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+            transition: all 0.3s linear;
+        }
+        .burger::before,
+        .burger::after{
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 40px;
+            height: 0;
+            border: 2px solid white;
+            border-radius: 1px;
+            padding: 0;
+            margin: 0;
+            transition: all 0.3s linear;
+        }
+        .burger::before{
+            top: 0;
+            transform-origin: left center;
+            transform: translate(0, -16px) rotate(0deg);
+        }
+        .burger::after{
+            bottom: 0;
+            transform-origin: right center;
+            transform: translate(0, 16px) rotate(0deg);
+        }
+        .expanded .burger {
+            background-color:transparent ;
+            border-radius: 4px;
+        }
+        .expanded .burger::before{
+            transform: translate(6px, 16px) rotate(-45deg);
+            border-radius: 4px;
+        }
+        .expanded .burger::after {
+            transform: translate(-6px, 16px) rotate(45deg);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="expanded">
+    <header class="header"><span class="burger"></span><h1>WEB SITE</h1></header>
+    <nav class="main-nav">
+        <a href="#" class="nav-link">Link 1</a>
+        <a href="#" class="nav-link">Link 2</a>
+        <a href="#" class="nav-link">Link 3</a>
+        <a href="#" class="nav-link">Link 4</a>
+    </nav>
+    <main>
+        <h2>Page Title</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores accusantium ipsam aspernatur maxime modi perferendis quis vel. Hic illum esse nesciunt non saepe dolore. Velit reprehenderit odio incidunt animi illo aliquam veritatis repudiandae quia cupiditate praesentium atque delectus, voluptatibus soluta alias? Temporibus sed mollitia accusantium at, unde ratione, id sequi voluptates distinctio, illo culpa voluptatibus quis. Quasi voluptas quibusdam, quod, voluptatibus, repellat consequatur quos officia inventore atque minus porro facilis. Saepe voluptas sint excepturi ducimus, non itaque amet impedit placeat, adipisci at doloribus blanditiis exercitationem? Eius voluptas nisi quas quisquam in aperiam at, maxime odit nesciunt aliquam eligendi fugiat. Possimus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima doloremque ratione libero dicta debitis deleniti animi dolores laborum inventore quo, nihil natus ex sequi culpa quos quia sit labore laudantium dolorem delectus non consequatur rerum est? Architecto sequi porro, impedit quia repudiandae inventore vero sapiente distinctio velit dolore pariatur, eos officiis autem quas eaque non nobis? Earum, voluptatibus quas ex, quasi voluptatum id asperiores sed corrupti possimus, dolores nobis omnis molestiae. Provident voluptatum deleniti quidem cum explicabo ipsa ea similique vel autem ratione minima amet mollitia doloremque, officiis neque sed possimus molestiae tenetur voluptas est repellendus. Hic odit ea reprehenderit.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate facilis sint ut voluptatum obcaecati deleniti maiores aperiam, minima aliquid quod, vel voluptatibus odit, quibusdam alias. Recusandae cupiditate quas explicabo, accusamus assumenda voluptatibus ullam veritatis omnis minima aperiam perferendis praesentium soluta maxime in doloremque, labore dicta doloribus saepe odit eligendi temporibus placeat. Maxime eveniet assumenda voluptatum esse eligendi error animi rerum eaque doloribus vitae veritatis, quaerat culpa sunt perferendis odio autem? Cumque corporis doloremque recusandae ipsum. Nobis, ab? Commodi dolorem autem neque inventore eveniet. Fugiat, quia optio aliquid maxime ducimus veritatis porro sed, similique praesentium fugit laborum obcaecati nesciunt harum quos?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, aperiam sint, aliquam aspernatur quia aut ea amet accusantium velit ducimus asperiores quis ipsam inventore exercitationem suscipit laborum vero autem maxime ipsa cum numquam laudantium dolorum delectus quas. Repellat quas libero commodi accusamus. Obcaecati minus labore illum vero animi quae assumenda distinctio nemo quasi fuga mollitia consequuntur, architecto expedita saepe a necessitatibus ipsam voluptates at quidem in, porro voluptate velit aut? Provident nisi cumque magnam libero voluptatum distinctio ducimus, iusto ratione culpa nihil vel fugit suscipit sunt harum vitae ea ipsam neque laudantium repellat officiis! Iusto possimus quibusdam enim laborum. Tenetur.</p>
+    </main>
+
+    <script>
+        let ISEXPANDED = true;
+
+        document.addEventListener("DOMContentLoaded", () =>{
+            //handle click event
+            let body = document.body;
+            body.addEventListener("click", ev =>{
+                console.log("toggle expanded on header");
+                ev.currentTarget.classList.toggle(
+                    "expanded"
+                );//showing the n=menu and the X
+            });
+            //handle media query when the page loads for the default state onload
+            let query = window.matchMedia("min-width:700px");
+            if (query.matches){
+                body.classList.add("expanded");
+                ISEXPANDED = true;
+            }else {
+                body.classList.remove("expanded");
+                ISEXPANDED = false;
+            }
+
+            //handle as the page size changes
+            const resizeObserver = new ResizeObserver(entries =>{
+                for (let entry of entries){
+                    if (entry.contentRect.width > 700 && !ISEXPANDED){
+                        body.classList.add("expanded");
+                        ISEXPANDED = true;
+                    }else if (entry.contentRect.width < 700 && ISEXPANDED){
+                        body.classList.remove("expanded");
+                        ISEXPANDED = false;
+                    }
+                }
+            });
+            resizeObserver.observe(body);
+        });
+    </script>
+</body>
+</html>

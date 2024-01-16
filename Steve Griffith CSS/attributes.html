@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        [data-beatle] has attribute
+        [data-beatle="john"] exact match
+        [data-beatle*="o"] contains
+        [data-beatle ~="john"] space separated
+        [data-beatle ^="john"] starts with
+        [data-beatle $="john"] ends with
+        [data-beatle !="john"] hyphen separated, 1 value
+        */
+        p[data-beatle $="john"]{
+            color: gold;
+        }
+        a[href^="https://"]{
+            /* all anchors with href that begins with https:// */
+            padding: 2rem;
+        }
+        a[href$=".pdf"]{
+            /* all anchors that link to pdf */
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Attribute Selectors</h1>
+    </header>
+    <main>
+        <p data-beatle="ringo paul john"><a href="https://www.investing.com/commodities/">Sample</a>  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime animi impedit iste consectetur eos molestiae at officia sint neque atque. Incidunt delectus nesciunt quod aspernatur impedit quia accusantium quisquam, fugit atque. Aut officia cum incidunt? Tempore, dolor. Nostrum, natus. Quisquam recusandae nemo temporibus eligendi asperiores necessitatibus ex sunt. Distinctio, reiciendis?</p>
+        <p data-beatle="paul"> <a href="https://www.example.com/document.pdf">link pdf</a> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto soluta quae obcaecati quo exercitationem eaque possimus nam, ullam tempore quas numquam repudiandae aliquam odit necessitatibus, hic fugit magni saepe tenetur! Laudantium, labore? Quas illum fugiat laudantium ex aliquam vitae laborum eum, enim nam laboriosam in beatae consectetur molestiae dolore culpa iusto qui perspiciatis nihil deleniti dolorem doloremque autem non! Id perspiciatis quas tempore cum, odio velit error, est enim voluptatum, odit placeat. Ratione sint tempora incidunt ducimus veritatis facere quisquam architecto maiores sed. Nulla aperiam soluta quos tempora magni, blanditiis, voluptatem excepturi nesciunt consequuntur odit non numquam doloribus distinctio itaque delectus. Totam, quo error ab architecto odio quod sint, nostrum mollitia earum minus quas libero dicta? Temporibus repellat nisi dolorem tempora veniam voluptatum, labore sapiente aliquid cupiditate itaque voluptatem enim, unde eaque consequuntur recusandae aut numquam eum a error minima, dolores aliquam. Ipsa quisquam modi neque necessitatibus odio natus, molestiae nihil error hic accusantium atque sed similique repellat a? Dolorum deserunt modi porro perspiciatis! Ipsam perspiciatis, debitis asperiores, cum aperiam modi fuga rem, dolores accusantium alias suscipit recusandae pariatur. Provident expedita eveniet id dolorum saepe laborum ratione distinctio nulla delectus, iure eum labore magni quas eius eaque quo repellat blanditiis.</p>
+        <p data-beatle="george">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo atque quisquam quis minima, eos doloremque necessitatibus voluptates ad placeat cumque earum, ex voluptatem animi saepe cum nam. Quidem ut ad corporis voluptatum at laborum molestiae nostrum sed est officia! Aspernatur pariatur sed, tempora voluptatibus, deserunt quos eaque minus maiores molestias aut velit eligendi laborum modi! Atque quo laboriosam repellendus aliquam soluta nisi quis veritatis provident! Facere laudantium unde animi aliquid repellendus provident voluptas itaque placeat, optio odit iusto id rem reiciendis dolorum voluptatum veritatis similique modi eum quidem quis quibusdam? Nam cumque repudiandae fugiat necessitatibus iusto illum deserunt laboriosam fugit eius temporibus? Quibusdam quod eos saepe sunt fuga explicabo vitae officia delectus voluptatum sequi ipsam, natus a molestiae? Id doloribus non nulla magni molestias et nam nemo enim assumenda itaque in corporis excepturi voluptatem, quam debitis. Eligendi, quaerat maiores. In cumque iste nisi est ratione inventore dicta qui expedita distinctio nesciunt dolorum quos, culpa, provident tempora repellat praesentium quibusdam ipsum obcaecati maiores repellendus sint? Soluta, eius. Distinctio dolores doloribus esse tempore illo eos, dolorum, sequi fugiat excepturi aliquid molestiae, soluta dolor? Delectus, provident optio? Saepe nulla obcaecati officiis ex itaque optio laboriosam animi, quasi iste fugiat maiores pariatur quidem voluptates.</p>
+        <p data-beatle="ringo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis quis tenetur quam est adipisci, id dolorem aut! Quidem dignissimos maxime quae! Tempora voluptas nostrum, saepe est delectus, maiores itaque qui iste dolorem autem, nihil atque! Quis quas eos ducimus at vitae error assumenda quasi molestias laudantium impedit, perspiciatis optio? Neque nesciunt explicabo earum voluptatibus, eaque fugit velit asperiores! Veniam officia quas illo, quos nam excepturi neque et perferendis. Amet officiis magnam odio non necessitatibus aut iste. Repudiandae amet architecto repellendus maxime consectetur commodi. Laboriosam quo optio ex cumque similique facilis eum assumenda nisi, quam doloribus laudantium quae aliquid magni nulla atque eius reprehenderit blanditiis mollitia est, aut incidunt. Culpa provident architecto, doloribus nam qui beatae optio illum ad a reprehenderit ex facere voluptatum modi quam blanditiis voluptates quisquam mollitia cum voluptatem dicta corrupti, eos sint? Error a quis architecto reiciendis blanditiis molestiae, obcaecati sint hic magni! Saepe magni libero nulla corrupti ipsam itaque sint, mollitia eos et neque sequi amet odit quia distinctio ad a soluta facilis? Mollitia modi facere, vel aspernatur harum, omnis cupiditate ut eaque accusamus officiis facilis laboriosam sit natus asperiores, iste qui aperiam accusantium. Magni nisi illum accusamus enim neque saepe sunt pariatur quod error cumque.</p>
+    </main>
+</body>
+</html>

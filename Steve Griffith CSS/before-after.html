@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main p:nth-child(1)::before{
+            content: "Hello";
+            padding-right: 1rem ;
+        }
+        main p:nth-child(1):hover::before{
+            color: red;
+            font-weight: 900;
+            cursor: pointer;
+        }
+        main p+p{
+            color: gold;
+        }
+        main p::after{
+            content: attr(data-time);
+            display: block;
+            color: olive;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS ::before and ::after</h1>
+        <h2>Pseudo-Elements</h2>
+    </header>
+    <main>
+        <p data-time="Updated on August 20, 2023 until 2025">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, rerum et. Deleniti tempora reprehenderit consectetur repellendus molestiae magni sapiente, harum laudantium sequi. Neque excepturi id illum soluta mollitia reprehenderit nostrum culpa porro eos hic, cumque tempora sequi, voluptatem repellendus. Praesentium eius reprehenderit, voluptatum nisi omnis quos libero, illum iste mollitia obcaecati sed minima doloremque amet soluta quam rerum exercitationem dicta est impedit officia voluptate suscipit iusto! Commodi dolor id corrupti, voluptas explicabo debitis qui quis facere? Dolorum recusandae quod, incidunt aliquam, veniam debitis maxime dolorem aspernatur molestias itaque quaerat quia deleniti officiis sed facilis, unde fugiat placeat asperiores illum non animi minus doloremque impedit? Voluptates enim accusamus consequuntur? Inventore mollitia repellendus officiis, odio illum ullam alias? Amet repellat hic consectetur eius doloremque eos neque, provident dolore omnis, debitis delectus quidem labore ratione nulla sed? Cum exercitationem quod labore praesentium inventore veritatis alias nihil obcaecati, voluptatum distinctio aut perferendis, soluta laborum. Iste mollitia, quisquam expedita excepturi quidem magnam cum eveniet dolor nobis magni natus voluptates sint illo. Dolorem at inventore libero quidem unde iusto consequatur impedit debitis distinctio quasi esse neque harum rerum, laudantium ad optio, molestias, corrupti sed. Possimus labore modi quis voluptas perferendis amet reiciendis. Tenetur sed modi officiis.</p>
+        <p data-time="Updated on August 20, 2023 until 2025">In corrupti ipsam commodi vitae eveniet nulla fugit modi nam vel obcaecati laborum adipisci iste illum recusandae, architecto sed voluptatibus error id deserunt tenetur? Optio saepe error vel eligendi, pariatur, architecto a, facilis ab perferendis iste eaque quia maiores nisi! Quidem voluptatibus qui recusandae? Quas, recusandae numquam commodi dolorum architecto veritatis doloremque rem optio quidem eligendi iusto soluta delectus laudantium quibusdam, id quasi praesentium, inventore quam odit harum consequuntur eius fuga? Ut ipsum quaerat corporis maxime praesentium repellendus ipsam magnam repudiandae quia aliquid, rem asperiores deserunt dolore molestiae esse in ducimus nesciunt. Qui repellat reprehenderit consequatur pariatur soluta ipsam architecto repellendus. Quasi ipsa, ab rerum maxime distinctio quidem aliquam perferendis optio velit, tempore repudiandae magni, dolores consequuntur dicta quos. Sint excepturi beatae enim nesciunt soluta ducimus quam tempore laudantium vero molestiae, sed nobis maiores recusandae iste in ipsam harum tenetur, deserunt debitis tempora. Neque eaque quae dicta repellat adipisci sed architecto ipsa? Autem sunt odit quisquam suscipit, adipisci totam magnam iusto a mollitia? Facilis, nulla doloremque ea dolorem, pariatur consequatur fugiat perferendis quae asperiores ullam magnam, nobis voluptates expedita a incidunt autem earum reprehenderit necessitatibus! Similique explicabo eveniet atque ea architecto, modi quia et earum animi ad totam sed voluptates.</p>
+        <p data-time="Updated on August 20, 2023 until 2025">Provident sequi nostrum tenetur distinctio asperiores minima in consequatur quaerat? Quia ea doloribus consectetur unde fuga. Nihil iste reprehenderit itaque cupiditate cum perferendis dolor, eaque deleniti voluptates expedita tempore veritatis voluptas nostrum iure neque ducimus repudiandae minus autem temporibus vel tenetur dolorum laudantium iusto aspernatur? Minus amet magnam placeat, ducimus tenetur voluptatem similique quasi optio nemo minima laboriosam illum, architecto praesentium, eius pariatur. Magni eius temporibus assumenda facere optio dolorem ab voluptas repellat corporis in quod ad doloribus iure consectetur qui, iusto doloremque, voluptatem eaque, reprehenderit modi? Qui accusamus, eveniet amet quibusdam odio delectus sit quo at enim assumenda ad, obcaecati mollitia nobis esse corporis reprehenderit minus. Eligendi cupiditate, veniam sed culpa omnis sequi aspernatur, et enim cum nesciunt cumque totam quos commodi amet molestias perferendis quasi ullam animi tempore minima. Doloremque eaque totam laudantium ea doloribus expedita porro saepe quas consequatur! Fuga excepturi dolore doloremque beatae nisi, blanditiis dolorem, saepe, dignissimos delectus libero repellendus fugit quisquam alias eos sequi? Dolor nobis ipsam quaerat ad dolore aspernatur! Repudiandae, commodi? Optio maxime blanditiis incidunt et error eveniet! Laudantium possimus atque quidem libero mollitia dolor fuga aut optio quisquam nostrum. Mollitia explicabo nesciunt sunt. Inventore consequuntur officiis rerum assumenda quidem tempore perspiciatis!</p>
+    </main>
+</body>
+</html>

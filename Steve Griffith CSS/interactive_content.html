@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Interactive Content</title>
+    <style>
+      /* touch-action: none; gestures - pan, pinch, zoom */
+      /* none, auto, pan-x, pan-y, pan-left, pan-right, pinch-zoom, manipulation */
+
+      /* pointer-events: auto; pointer (finger, mouse, stylus) - click, hover, drag 
+                            prevent the entry point for the event */
+      /* none, auto, visiblePainted, visible, painted, visibleStroke, visibleFill, fill, stroke, all */
+
+      button {
+        width: 40vw;
+        /* touch-action: none;
+        pointer-events:  */
+      }
+      div {
+        pointer-events: none;
+      }
+      button {
+        pointer-events: none;
+      }
+      svg * {
+        pointer-events: fill;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="one">
+      <p>
+        <a href="#">Anchor inside the paragraph</a>, dolor sit amet consectetur
+        adipisicing elit. Id itaque minima recusandae velit, repellendus
+        eligendi perspiciatis omnis tempore ex distinctio laudantium, dolore
+        quis accusantium libero consequuntur esse debitis eaque mollitia?
+      </p>
+    </div>
+    <div id="two">
+      <a href="#">
+        <p>
+          Anchor outside the paragraph, exercitationem fugiat nesciunt
+          consequuntur magnam vero totam dolorem quaerat dolorum illo labore
+          quam nostrum. Enim, hic labore. Voluptatem similique nisi quis
+          repudiandae obcaecati! Error illum cumque itaque.
+        </p></a
+      >
+    </div>
+    <div id="three">
+      <button>
+        <svg
+          viewBox="0 0 120 80"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <a xlink:href="#">
+            <circle
+              id="five"
+              cx="30"
+              cy="30"
+              r="25"
+              fill="transparent"
+              stroke="#bada55"
+            />
+            <circle
+              id="six"
+              cx="85"
+              cy="30"
+              r="25"
+              fill="#bada55"
+              stroke="#999999"
+            />
+          </a>
+        </svg>
+      </button>
+    </div>
+    <div id="four">
+      <button>
+        <img src="./circles.svg" alt="svg circles" />
+      </button>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let div1 = document.querySelector("#one");
+        let div2 = document.querySelector("#two");
+        let div3 = document.querySelector("#three");
+        let div4 = document.querySelector("#four");
+        let p1 = div1.querySelector("p");
+        let p2 = div2.querySelector("p");
+        let a1 = div1.querySelector("a");
+        let a2 = div2.querySelector("a");
+        let a3 = div3.querySelector("button");
+        let a4 = div4.querySelector("button");
+        let svg3 = div3.querySelector("svg");
+        let svg3a = svg3.querySelector("a");
+        let svg4 = div4.querySelector("img");
+        let svg4a = svg4.querySelector("a");
+        div1.addEventListener("click", clicked);
+        div2.addEventListener("click", clicked);
+        div3.addEventListener("click", clicked);
+        p1.addEventListener("click", clicked);
+        p2.addEventListener("click", clicked);
+        a1.addEventListener("click", clicked);
+        a2.addEventListener("click", clicked);
+        a3.addEventListener("click", clicked);
+        svg3.addEventListener("click", clicked);
+        svg3a.addEventListener("click", clicked);
+        a4.addEventListener("click", clicked);
+        svg4.addEventListener("click", clicked);
+        //svg4a.addEventListener("click", clicked);
+        //cannot access elements inside the svg
+      });
+      function clicked(ev) {
+        console.log(
+          "clicked:",
+          ev.target,
+          "which triggered listener on",
+          ev.currentTarget
+        );
+        //ev.stopPropagation();
+      }
+    </script>
+  </body>
+</html>

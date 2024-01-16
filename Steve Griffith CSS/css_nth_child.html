@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_nth_chile_selector</title>
+    <style>
+        ul li {
+            font-size: 2rem;
+        }
+        ul li:first-child{
+            color: red;
+        }
+        ul li:last-child{
+            color: gold;
+        }
+        li:nth-child(3n + 2){
+            color: greenyellow;
+        }
+        li:nth-child(even){
+            background-color: olive;
+        }
+        .main p:first-of-type(1){
+            font-size: 2rem;
+        }
+        .main :nth-child(3){
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <main class="main">
+        <h1>CSS :nth-child Selectors</h1>
+        <h2>the sub heading</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sapiente ex hic aspernatur perferendis, voluptatum nulla vel officiis laboriosam repudiandae, similique numquam, deleniti eos? Veniam odit nam laboriosam rerum vitae!</p>
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+            <li>item 5</li>
+        </ul>
+        <p>Q</p>
+        <p>expedita</p>
+    </main>
+</body>
+</html>

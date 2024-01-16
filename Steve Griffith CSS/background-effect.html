@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layering Background Effects</title>
+    <!-- import Raleway font from google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* beach image - https://unsplash.com/photos/GeGqpdduiaQ */
+      html {
+        font-size: 20px;
+        font-family: "Raleway", sans-serif;
+      }
+      header {
+        min-height: 8rem;
+        padding: 0;
+      }
+      header > h1 {
+        font-size: 7rem;
+        line-height: 8rem;
+        text-align: center;
+        letter-spacing: 0.5rem;
+        font-weight: 800;
+      }
+      .v1 {
+        background-image: url(./sea2.jpg), url(./sea.jpg);
+        background-position: center, center;
+        background-size: cover, cover;
+      }
+      .v1 > h1 {
+        color: white;
+      }
+      .v2 {
+        background-color: black;
+      }
+      .v2 > h1 {
+        background-image: url(./sea.jpg), url(./sea2.jpg);
+        background-position: center, center;
+        background-size: cover, cover;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="v1">
+      <h1>SURFIN&apos;</h1>
+    </header>
+
+    <header class="v2">
+      <h1>SURFIN&apos;</h1>
+    </header>
+  </body>
+</html>
